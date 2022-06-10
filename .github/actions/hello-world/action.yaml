@@ -1,10 +1,21 @@
-name: "my cat fact action"
+name: "my hello action"
 
-description: "Get external data with GitHub Actions"
+description: "say hello with GitHub Actions"
 
-outputs:
-  fact:
-    description: Resulting cat fact from the https://cat-fact.herokuapp.com/facts api
+inputs:
+  firstGreeting:
+    description: "who would you like to greet in the console"
+    required: true
+    default: "Hubot"
+
+  secondGreeting:
+    description: "another person to greet"
+    required: true
+    default: "Mona the Octocat"
+
+  thirdGreeting:
+    description: "a third greeting"
+    required: false
 
 runs:
   using: "docker"
